@@ -7,7 +7,7 @@ export const profile = {
   phone: '+91 98604 68212',
   website: 'nikhiljadhav.com',
   linkedin: 'https://www.linkedin.com/',
-  resumeUrl: "/Resume.pdf",
+  resumeUrl: "/Nikhil_Jadhav_Resume.pdf",
   yearsExperience: '17+',
   summary:
     'UX Architect and Usability expert with 17+ years shaping automotive HMIs, mobile and web products. Currently an Associate Solution Architect at a European automotive software company, leading global UX programs that consolidate 8+ vehicle brands across 6+ markets — delivering wireframes, specifications and design systems for Software Defined Vehicles.',
