@@ -15,7 +15,7 @@ export function Resume() {
         <Reveal>
           <a
             href={profile.resumeUrl}
-            download="https://github.com/nykboee/nikhil-portfolio/blob/main/public/NikhiJadhav_UX_Architect_2026.pdf" //
+            download="NikhiJadhav_UX_Architect_2026.pdf" //
             className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-opacity hover:opacity-90"
           >
             <Download className="h-4 w-4" />
