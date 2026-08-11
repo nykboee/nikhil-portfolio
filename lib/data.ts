@@ -151,7 +151,7 @@ export const designProcess: ProcessStep[] = [
 ]
 
 export const aiWorkflow: ProcessStep[] = [
-  { title: 'PDF Requirements', description: 'Raw specs, RFPs and stakeholder documents ingested.' },
+  { title: 'PDF Requirements', description: 'Raw specs, RFPs and stakeholder documents ingested.',expandDescription: 'What happens - Raw requirement PDFs, client RFPs, or stakeholder briefs are uploaded into the system.', 'Why it matters - Eliminates manual reading and parsing of hundreds of pages of technical documentation.' },
   { title: 'Requirement Analysis Agent', description: 'Extracts goals, constraints and acceptance criteria.' },
   { title: 'User Journey Generator', description: 'Drafts personas and journeys from structured intent.' },
   { title: 'Wireframe Generator', description: 'Produces low-fidelity flows for rapid review.' },
