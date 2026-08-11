@@ -5,7 +5,7 @@ import { aiWorkflow } from '@/lib/data'
 
 export function AiInnovation() {
   return (
-    <section id="ai" className="relative overflow-hidden border-y border-border bg-card/30">
+    <section id="ai" className="relative overflow-visible border-y border-border bg-card/30">
       <div
         aria-hidden
         className="pointer-events-none absolute right-0 top-0 h-[40rem] w-[40rem] rounded-full bg-primary/10 blur-[140px]"
@@ -27,15 +27,16 @@ export function AiInnovation() {
                 delay={(i % 4) * 0.06}
                 className="relative"
               >
-                {/* Card wrapper */}
-                <div className="group relative z-10 h-full">
+                <div className="group relative h-[190px]">
                   
-                  {/* Base card */}
+                  {/* Main card */}
                   <div
                     className="
                       glass
-                      relative
-                      h-full
+                      absolute
+                      inset-x-0
+                      top-0
+                      z-10
                       min-h-[190px]
                       overflow-hidden
                       rounded-2xl
@@ -45,15 +46,15 @@ export function AiInnovation() {
                       transition-all
                       duration-500
                       ease-out
-
+                      
                       group-hover:z-50
-                      group-hover:min-h-[190px]
-                      group-hover:scale-[1.04]
+                      group-hover:min-h-[350px]
+                      group-hover:scale-[1.03]
                       group-hover:border-primary/50
                       group-hover:shadow-2xl
                     "
                   >
-                    {/* Card header */}
+                    {/* Number + arrow */}
                     <div className="flex items-center justify-between">
                       <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-xs font-bold text-primary-foreground">
                         {i + 1}
@@ -72,7 +73,7 @@ export function AiInnovation() {
                       {step.title}
                     </h3>
 
-                    {/* Existing description */}
+                    {/* Description */}
                     <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
                       {step.description}
                     </p>
@@ -80,44 +81,35 @@ export function AiInnovation() {
                     {/* Expandable content */}
                     <div
                       className="
-                        pointer-events-none
-                        absolute
-                        left-0
-                        right-0
-                        top-full
-                        rounded-b-2xl
-                        border-x
-                        border-b
-                        border-primary/50
-                        bg-card
-                        px-6
-                        pb-6
+                        mt-5
+                        border-t
+                        border-border/60
+                        pt-5
                         opacity-0
+                        translate-y-3
                         transition-all
                         duration-500
                         ease-out
-
-                        group-hover:pointer-events-auto
-                        group-hover:top-full
+                        group-hover:translate-y-0
                         group-hover:opacity-100
                       "
                     >
-                      <div className="border-t border-border/60 pt-5">
-                        <p className="text-xs leading-relaxed text-muted-foreground">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                          Sed do eiusmod tempor incididunt ut labore et dolore magna
-                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                          Duis aute irure dolor in reprehenderit in voluptate velit
-                          esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
-                      </div>
+                      <p className="text-xs leading-relaxed text-muted-foreground">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit
+                        esse cillum dolore eu fugiat nulla pariatur.
+                      </p>
                     </div>
 
                     {/* Hover hint */}
                     <div
                       className="
-                        mt-5
+                        absolute
+                        bottom-5
+                        left-6
                         text-[10px]
                         font-medium
                         uppercase
