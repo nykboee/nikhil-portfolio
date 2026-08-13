@@ -95,33 +95,30 @@ export function AiInnovation() {
                       "
                     >
                       <p className="text-xs leading-relaxed text-muted-foreground">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed do eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit
-                        esse cillum dolore eu fugiat nulla pariatur.
-                      </p>
+                      {step.expandedDescription}
+                    </p>
                     </div>
 
-                    {/* Hover hint */}
-                    <div
-                      className="
-                        absolute
-                        bottom-5
-                        left-6
-                        text-[10px]
-                        font-medium
-                        uppercase
-                        tracking-[0.18em]
-                        text-primary/60
-                        transition-opacity
-                        duration-300
-                        group-hover:opacity-0
-                      "
-                    >
-                      Hover to explore
-                    </div>
+                   {/* Expandable content */}
+                  <div
+                    className="
+                      mt-5
+                      border-t
+                      border-border/60
+                      pt-5
+                      opacity-0
+                      translate-y-3
+                      transition-all
+                      duration-500
+                      ease-out
+                      group-hover:translate-y-0
+                      group-hover:opacity-100
+                    "
+                >
+                    <p className="text-xs leading-relaxed text-muted-foreground">
+                      {step.expandedDescription}
+                    </p>
+                  </div>
                   </div>
                 </div>
               </Reveal>
