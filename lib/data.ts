@@ -135,6 +135,7 @@ export const tools = [
 export type ProcessStep = {
   title: string
   description: string
+  expandedDescription?: string
 }
 
 export const designProcess: ProcessStep[] = [
@@ -151,14 +152,55 @@ export const designProcess: ProcessStep[] = [
 ]
 
 export const aiWorkflow: ProcessStep[] = [
-  { title: 'PDF Requirements', description: 'Raw specs, RFPs and stakeholder documents ingested.' },
-  { title: 'Requirement Analysis Agent', description: 'Extracts goals, constraints and acceptance criteria.' },
-  { title: 'User Journey Generator', description: 'Drafts personas and journeys from structured intent.' },
-  { title: 'Wireframe Generator', description: 'Produces low-fidelity flows for rapid review.' },
-  { title: 'Figma Design System', description: 'Maps output to tokens and multi-brand components.' },
-  { title: 'Developer Specifications', description: 'Generates specs, states and handover-ready notes.' },
-  { title: 'QA Test Cases', description: 'Derives test scenarios from requirements automatically.' },
-  { title: 'Production Ready Design', description: 'Human-reviewed, compliant, shippable HMI.' },
+ export const aiWorkflow: ProcessStep[] = [
+  {
+    title: 'PDF Requirements',
+    description: 'Raw specs, RFPs and stakeholder documents ingested.',
+    expandedDescription:
+      'The process starts with unstructured automotive requirements, RFPs, feature specifications and stakeholder inputs. AI reads and structures the source material while preserving the original context and traceability.',
+  },
+  {
+    title: 'Requirement Analysis Agent',
+    description: 'Extracts goals, constraints and acceptance criteria.',
+    expandedDescription:
+      'The agent identifies functional requirements, user goals, system constraints, dependencies and acceptance criteria. The output transforms a large specification into structured inputs that can be reviewed and acted upon by the UX team.',
+  },
+  {
+    title: 'User Journey Generator',
+    description: 'Drafts personas and journeys from structured intent.',
+    expandedDescription:
+      'Structured requirements are translated into user scenarios, personas, journeys and task flows. This creates an initial UX model that designers can validate, challenge and refine before moving into interface design.',
+  },
+  {
+    title: 'Wireframe Generator',
+    description: 'Produces low-fidelity flows for rapid review.',
+    expandedDescription:
+      'The system converts validated journeys into low-fidelity wireframes and interaction flows. This allows teams to evaluate information architecture and task efficiency before investing time in visual design.',
+  },
+  {
+    title: 'Figma Design System',
+    description: 'Maps output to tokens and multi-brand components.',
+    expandedDescription:
+      'Generated structures are mapped to the approved Figma design system, including components, variables, tokens and interaction patterns. This keeps AI-generated concepts aligned with established UX standards and multi-brand requirements.',
+  },
+  {
+    title: 'Developer Specifications',
+    description: 'Generates specs, states and handover-ready notes.',
+    expandedDescription:
+      'Once the design direction is validated, the system prepares detailed specifications covering component behaviour, interaction states, annotations, edge cases and implementation guidance for development teams.',
+  },
+  {
+    title: 'QA Test Cases',
+    description: 'Derives test scenarios from requirements automatically.',
+    expandedDescription:
+      'Requirements and interaction states are converted into structured QA scenarios. This creates a traceable connection between the original requirement, the UX design and the validation criteria used during implementation and testing.',
+  },
+  {
+    title: 'Production Ready Design',
+    description: 'Human-reviewed, compliant, shippable HMI.',
+    expandedDescription:
+      'The final output is not generated and shipped blindly. Designers and product teams review the complete journey, validate usability and compliance, and apply human judgment before the experience moves toward production.',
+  },
 ]
 
 export type CaseSection = { heading: string; body: string; list?: string[] }
