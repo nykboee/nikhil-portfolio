@@ -43,12 +43,10 @@ export function AiInnovation() {
                   className="relative"
                 >
                   <div
-                    className={`
-                      group relative
-                      ${isOpen ? 'z-50' : 'z-10'}
-                    `}
+                    className={`group relative ${
+                      isOpen ? 'z-50' : 'z-10'
+                    }`}
                   >
-                    {/* Main card */}
                     <button
                       type="button"
                       onClick={() => handleCardClick(i)}
@@ -69,7 +67,6 @@ export function AiInnovation() {
                         focus:outline-none
                         focus:ring-2
                         focus:ring-primary/50
-
                         ${
                           isOpen
                             ? 'min-h-[350px] scale-[1.03] border-primary/50 shadow-2xl'
@@ -84,7 +81,6 @@ export function AiInnovation() {
                         </span>
 
                         <div className="flex items-center gap-3">
-                          {/* Workflow connector */}
                           {i < aiWorkflow.length - 1 && (
                             <>
                               <ArrowRight className="hidden h-4 w-4 text-primary/60 lg:block" />
@@ -92,12 +88,17 @@ export function AiInnovation() {
                             </>
                           )}
 
-                          {/* Expand indicator */}
                           <ChevronDown
                             className={`
-                              h-4 w-4 text-muted-foreground
-                              transition-transform duration-500
-                              ${isOpen ? 'rotate-180 text-primary' : ''}
+                              h-4 w-4
+                              text-muted-foreground
+                              transition-transform
+                              duration-500
+                              ${
+                                isOpen
+                                  ? 'rotate-180 text-primary'
+                                  : ''
+                              }
                             `}
                           />
                         </div>
@@ -113,7 +114,7 @@ export function AiInnovation() {
                         {step.description}
                       </p>
 
-                      {/* Expanded content */}
+                      {/* Expanded description */}
                       <div
                         className={`
                           mt-5
@@ -123,7 +124,6 @@ export function AiInnovation() {
                           transition-all
                           duration-500
                           ease-out
-
                           ${
                             isOpen
                               ? 'translate-y-0 opacity-100'
@@ -134,18 +134,33 @@ export function AiInnovation() {
                         <p className="text-xs leading-relaxed text-muted-foreground">
                           {step.expandedDescription}
                         </p>
+                      </div>
 
-                        <div className="mt-4 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-widest text-primary">
-                          <span>
-                            {isOpen ? 'Click to collapse' : 'Explore'}
-                          </span>
-                          <ChevronDown
-                            className={`
-                              h-3 w-3 transition-transform duration-300
-                              ${isOpen ? 'rotate-180' : ''}
-                            `}
-                          />
-                        </div>
+                      {/* Interaction hint */}
+                      <div
+                        className={`
+                          absolute
+                          bottom-5
+                          left-6
+                          flex
+                          items-center
+                          gap-2
+                          text-[10px]
+                          font-medium
+                          uppercase
+                          tracking-[0.18em]
+                          text-primary/60
+                          transition-opacity
+                          duration-300
+                          ${
+                            isOpen
+                              ? 'opacity-0'
+                              : 'opacity-100 group-hover:opacity-0'
+                          }
+                        `}
+                      >
+                        <span>Click to explore</span>
+                        <ChevronDown className="h-3 w-3" />
                       </div>
                     </button>
                   </div>
@@ -158,4 +173,3 @@ export function AiInnovation() {
     </section>
   )
 }
-
