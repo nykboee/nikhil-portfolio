@@ -152,7 +152,6 @@ export const designProcess: ProcessStep[] = [
 ]
 
 export const aiWorkflow: ProcessStep[] = [
- export const aiWorkflow: ProcessStep[] = [
   {
     title: 'PDF Requirements',
     description: 'Raw specs, RFPs and stakeholder documents ingested.',
