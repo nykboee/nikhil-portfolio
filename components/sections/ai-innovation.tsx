@@ -69,8 +69,8 @@ export function AiInnovation() {
                         focus:ring-primary/50
                         ${
                           isOpen
-                            ? 'min-h-[350px] scale-[1.03] border-primary/50 shadow-2xl'
-                            : 'min-h-[190px] hover:min-h-[350px] hover:scale-[1.03] hover:border-primary/50 hover:shadow-2xl'
+                          ? 'min-h-[350px] scale-[1.03] border-primary/50 shadow-2xl'
+                          : 'min-h-[190px] border-border'
                         }
                       `}
                     >
@@ -127,7 +127,7 @@ export function AiInnovation() {
                           ${
                             isOpen
                               ? 'translate-y-0 opacity-100'
-                              : 'translate-y-3 opacity-0'
+                              : 'hidden'
                           }
                         `}
                       >
