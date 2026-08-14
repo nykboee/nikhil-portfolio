@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react'
 import { ArrowDown, ArrowRight, ChevronDown } from 'lucide-react'
 import { SectionHeader } from '@/components/section-header'
@@ -156,4 +158,4 @@ export function AiInnovation() {
     </section>
   )
 }
-```
+
