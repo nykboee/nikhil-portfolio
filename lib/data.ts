@@ -233,14 +233,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: 'ecocharge',
-    title: 'EcoCharge',
+    slug: 'GreenCharge',
+    title: 'GreenCharge',
     category: 'EV Charging',
     year: '2024',
     summary:
       'A unified EV charging experience spanning in-vehicle HMI and companion app — route with confidence, charge without friction.',
-    cover: '/projects/ecocharge-cover.png',
-    hero: '/projects/ecocharge-hero.png',
+    cover: '/projects/GreenCharge-cover.png',
+    hero: '/projects/GreenCharge-hero.png',
     tags: ['Android Automotive', 'EV Charging', 'Companion App', 'Design System'],
     metrics: [
       { value: '-38%', label: 'Charging session drop-off' },
@@ -248,7 +248,7 @@ export const projects: Project[] = [
       { value: '2.1s', label: 'Time to nearest charger' },
     ],
     overview:
-      'EcoCharge reimagines the electric charging journey as one continuous flow from planning to plugging in. The in-vehicle HMI and mobile companion share a single design language so drivers never lose context.',
+      'GreenCharge reimagines the electric charging journey as one continuous flow from planning to plugging in. The in-vehicle HMI and mobile companion share a single design language so drivers never lose context.',
     challenge:
       'Range anxiety and fragmented charging networks made EV road trips stressful. Drivers juggled multiple apps, inconsistent pricing and unreliable availability data.',
     research: {
@@ -275,12 +275,12 @@ export const projects: Project[] = [
     taskflow:
       'The critical path from destination entry to confirmed charging stop was reduced from 9 steps to 4, with smart defaults for preferred networks.',
     wireframes: [
-      { image: '/projects/ecocharge-wire-1.png', caption: 'Route planner with charging stops' },
-      { image: '/projects/ecocharge-wire-2.png', caption: 'Live charger availability list' },
+      { image: '/projects/GreenCharge-wire-1.png', caption: 'Route planner with charging stops' },
+      { image: '/projects/GreenCharge-wire-2.png', caption: 'Live charger availability list' },
     ],
     ui: [
-      { image: '/projects/ecocharge-ui-1.png', caption: 'In-vehicle charging map' },
-      { image: '/projects/ecocharge-ui-2.png', caption: 'Companion app session tracking' },
+      { image: '/projects/GreenCharge-ui-1.png', caption: 'In-vehicle charging map' },
+      { image: '/projects/GreenCharge-ui-2.png', caption: 'Companion app session tracking' },
     ],
     designSystem: {
       heading: 'Design System',
