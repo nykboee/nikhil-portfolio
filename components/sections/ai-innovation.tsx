@@ -83,8 +83,6 @@ export function AiInnovation() {
                         <div className="flex items-center gap-3">
                           {i < aiWorkflow.length - 1 && (
                             <>
-                              <ArrowRight className="hidden h-4 w-4 text-primary/60 lg:block" />
-                              <ArrowDown className="h-4 w-4 text-primary/60 lg:hidden" />
                             </>
                           )}
 
