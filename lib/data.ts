@@ -622,7 +622,13 @@ export const projects: Project[] = [
       'AI removed the busywork so judgment could scale — the designer became the editor-in-chief of the pipeline.',
   },
 ]
-
+export type ThoughtLeadership = {
+  type: string
+  title: string
+  detail: string
+  year: string
+  slug?: string
+}
 export const thoughtLeadership = [
   { type: 'Article', title: 'Dogfooding My HMI Design', detail: 'Testing automotive UX in my own car to validate touch targets, glanceability', year: '2026' slug: 'dogfooding-hmi' },
   { type: 'Award', title: '7× KROWN Awards', detail: 'Recognized for excellence in automotive UX delivery.', year: '2023—24' },
