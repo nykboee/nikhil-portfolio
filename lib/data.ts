@@ -627,7 +627,7 @@ export type ThoughtLeadership = {
   title: string
   detail: string
   year: string
-  slug?: string
+  link?: string
 }
 export const thoughtLeadership = [
 {
