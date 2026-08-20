@@ -16,7 +16,7 @@ export default function DogfoodingDigitalCockpitPage() {
 
         <div className="mb-8">
           <span className="text-sm font-medium text-primary">
-            Automotive UX · Usability Testing
+            Automotive UX · Usability Testing ·  🥅 Design Testing
           </span>
 
           <h1 className="mt-4 font-display text-4xl font-bold tracking-tight md:text-6xl">
@@ -37,7 +37,18 @@ export default function DogfoodingDigitalCockpitPage() {
             className="h-auto w-full object-cover"
           />
         </div>
+        <div className="mb-8">
+          
+          <p></p> className="mt-7 font-display text- xl font-bold tracking-tight md:text- xl">
+            A prototype can look perfect on a Figma canvas and still feel completely wrong behind the wheel.
+          </p>
 
+          <p className="mt-6 text-xl leading-relaxed text-muted-foreground">
+            Why I put my own automotive HMI prototypes inside my own car before
+            putting them in front of users.
+          </p>
+        </div>
+        
         <div className="prose prose-lg max-w-none dark:prose-invert">
           <p>
             Designing an automotive interface on a desktop screen is one thing.
