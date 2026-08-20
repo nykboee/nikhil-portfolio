@@ -427,13 +427,36 @@ export default function AIDesignOpsAutomotiveHMIPage() {
           </p>
 
           <div className="mt-8 overflow-hidden rounded-xl border border-border">
-            {architecture.map((layer, index) => (
-              <div
-                key={layer.tier}
-                className={`p-6 ${
-                  index !== 0 ? 'border-t border-border' : ''
-                }`}
-              >
+          {architectureLayers.map((layer, index) => (
+                    <div
+                      key={layer.tier}
+                      className={
+                        index !== 0
+                          ? 'border-t border-border p-6'
+                          : 'p-6'
+                      }
+                    >
+                      <div className="flex flex-col gap-4 md:flex-row md:items-start">
+                        <div className="flex h-10 w-16 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-sm font-bold text-primary">
+                          {layer.tier}
+                        </div>
+                  
+                        <div>
+                          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+                            {layer.label}
+                          </p>
+                  
+                          <h3 className="mt-1 font-display text-lg font-bold text-foreground">
+                            {layer.title}
+                          </h3>
+                  
+                          <p className="mt-2 text-sm leading-7 text-muted-foreground">
+                            {layer.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
                   {layer.tier}
                 </p>
