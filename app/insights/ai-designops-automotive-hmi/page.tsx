@@ -3,7 +3,7 @@
           <h2 className="font-display text-3xl font-bold tracking-tight">
             A Reference Architecture for AI DesignOps
           </h2>
-
+ 
           <p className="mt-5 text-base leading-8 text-muted-foreground">
             A practical implementation needs more than an LLM connected to a
             design tool. It needs controlled knowledge, specialized agents,
