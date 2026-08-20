@@ -630,7 +630,7 @@ export type ThoughtLeadership = {
   slug?: string
 }
 export const thoughtLeadership = [
-  { type: 'Article', title: 'Dogfooding My HMI Design', detail: 'Testing automotive UX in my own car to validate touch targets, glanceability', year: '2026' slug: 'dogfooding-hmi' },
+  { type: 'Article', title: 'Dogfooding My HMI Design', detail: 'Testing automotive UX in my own car to validate touch targets, glanceability', year: '2026' slug: 'dogfooding-hmi', link: '/insights/dogfooding-digital-cockpit', },
   { type: 'Award', title: '7× KROWN Awards', detail: 'Recognized for excellence in automotive UX delivery.', year: '2023—24' },
   { type: 'Talk', title: 'Designing the Software Defined Cockpit', detail: 'Keynote on multi-brand HMI at an internal design summit.', year: '2024' },
   { type: 'Whitepaper', title: 'AI DesignOps for Automotive HMI', detail: 'A framework for agentic requirement-to-design pipelines.', year: '2024' },
