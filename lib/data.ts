@@ -630,13 +630,38 @@ export type ThoughtLeadership = {
   slug?: string
 }
 export const thoughtLeadership = [
-  { type: 'Article', title: 'Dogfooding My HMI Design', detail: 'Testing automotive UX in my own car to validate touch targets, glanceability', year: '2026' slug: 'dogfooding-hmi', link: '/insights/dogfooding-digital-cockpit', },
-  { type: 'Award', title: '7× KROWN Awards', detail: 'Recognized for excellence in automotive UX delivery.', year: '2023—24' },
-  { type: 'Talk', title: 'Designing the Software Defined Cockpit', detail: 'Keynote on multi-brand HMI at an internal design summit.', year: '2024' },
-  { type: 'Whitepaper', title: 'AI DesignOps for Automotive HMI', detail: 'A framework for agentic requirement-to-design pipelines.', year: '2024' },
-  { type: 'Article', title: 'Glanceability by Design', detail: 'Principles for safe, delightful in-vehicle interfaces.', year: '2023' },
-  { type: 'Award', title: '6× Project Champion', detail: 'Repeated recognition for project leadership at TCS.', year: '2013—23' },
-  { type: 'Talk', title: 'From Cluster to HUD', detail: 'Session on layered guidance across cockpit surfaces.', year: '2023' },
+{
+    type: 'Award',
+    title: '7× KROWN Awards',
+    detail: 'Recognized for excellence in automotive UX delivery.',
+    year: '2023—24',
+  },
+  {
+    type: 'Talk',
+    title: 'Designing the Software Defined Cockpit',
+    detail: 'Keynote on multi-brand HMI at an internal design summit.',
+    year: '2024',
+  },
+  {
+    type: 'Whitepaper',
+    title: 'AI DesignOps for Automotive HMI',
+    detail: 'A framework for agentic requirement-to-design pipelines.',
+    year: '2024',
+  },
+  {
+    type: 'Article',
+    title: 'Dogfooding the Digital Cockpit',
+    detail:
+      'Testing my own HMI prototype inside a real vehicle to evaluate usability, touch capacity and physical reach.',
+    year: '2026',
+    link: '/insights/dogfooding-digital-cockpit',
+  },
+  {
+    type: 'Article',
+    title: 'Glanceability by Design',
+    detail: 'Principles for safe, delightful in-vehicle interfaces.',
+    year: '2023',
+  },
 ]
 
 export const testimonials = [
