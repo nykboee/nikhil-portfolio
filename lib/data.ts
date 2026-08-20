@@ -643,10 +643,11 @@ export const thoughtLeadership = [
     year: '2024',
   },
   {
-    type: 'Whitepaper',
-    title: 'AI DesignOps for Automotive HMI',
-    detail: 'A framework for agentic requirement-to-design pipelines.',
-    year: '2024',
+  type: 'Whitepaper',
+  title: 'AI DesignOps for Automotive HMI',
+  detail: 'A framework for agentic requirement-to-design pipelines.',
+  year: '2024',
+  link: '/insights/ai-designops-automotive-hmi',
   },
   {
     type: 'Article',
