@@ -236,9 +236,11 @@ export const projects: Project[] = [
     slug: 'GreenCharge',
     title: 'GreenCharge',
     category: 'EV Charging',
-    year: '2024',
+    year: '2026',
     summary:
-      'A unified EV charging experience spanning in-vehicle HMI and companion app — route with confidence, charge without friction.',
+      'The goal is rates - and CO2 -optimized charging for users of electric vehicles. The energy market offers
+dynamic tariffs and low-emission time windows, which can be identified using price and CO2 forecasts.
+Users require recommendations and automation as well as user-friendly visualization.',
     cover: '/projects/GreenCharge-cover.png',
     hero: '/projects/GreenCharge-hero.png',
     tags: ['Android Automotive', 'EV Charging', 'Companion App', 'Design System'],
