@@ -365,16 +365,28 @@ export const projects: Project[] = [
     },
 
     accessibility: {
-      heading: 'Accessibility',
-      body:
-        'Accessibility and automotive usability were considered throughout the interaction and visual design. The interface prioritizes glanceability, readable typography, high contrast, clear component states and sufficiently large interaction targets. Critical information such as recommended charging windows is not communicated through colour alone. The experience also considers German text expansion, consistent interaction placement and reduced cognitive demand during in-vehicle use.',
-    },
+  heading: 'Accessibility',
+  body:
+    'The interface was designed for an in-vehicle environment where glanceability, readability and interaction simplicity are critical. Visual hierarchy and interaction patterns were optimized to communicate charging recommendations without increasing driver workload.',
+
+  list: [
+    'High-contrast charging states and clear visual hierarchy for cost, CO₂ and recommendation information.',
+    'Large touch targets and predictable interaction placement for automotive use.',
+    'Critical information is not communicated through colour alone, with localization and German text expansion considered throughout the design.',
+  ],
+},
 
     handover: {
       heading: 'Developer Handover',
       body:
-        'The GreenCharge handover package connects UX requirements directly to implementation. The Figma delivery includes user journeys, use cases, task flows, information architecture, low- and high-fidelity designs, reusable components, design tokens, screen specifications, interaction behaviour, content, system states and edge cases. Developer documentation defines the expected behaviour for data retrieval, chart rendering, optimization, departure-time restrictions, setup validation, schedule transmission and success or failure feedback.',
-    },
+    'The final Figma delivery connects UX requirements directly to implementation, giving developers a single source of truth for screens, components, states and interaction behaviour. Specifications were structured around the functional requirements and edge cases identified during the UX process.',
+
+  list: [
+    'Screen specifications covering layout, content, component behaviour and interaction states.',
+    'Component variants, design tokens and interaction rules aligned with the Figma design system.',
+    'Loading, timeout, error, partial-data, optimization and schedule-transmission states documented for implementation.',
+  ],
+},
 
     results: [
       'Established a complete UX/UI concept for cost- and CO₂-optimized home charging.',
