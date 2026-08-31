@@ -238,19 +238,19 @@ export const projects: Project[] = [
     category: 'EV Charging',
     year: '2026',
     summary:
-      'The goal is rates - and CO2 -optimized charging for users of electric vehicles. The energy market offers dynamic tariffs and low-emission time windows, which can be identified using price and CO2 forecasts. Users require recommendations and automation as well as user friendly visualization.',
+      'The GreenCharge application shall provide EV users with optimized home charging schedules based on dynamic electricity tariffs and CO₂ emission forecasts within a 24-hour time horizon.',
     cover: '/projects/GreenCharge-cover.png',
     hero: '/projects/GreenCharge-hero.png',
     tags: ['Android Automotive', 'EV Charging', 'Companion App', 'Design System'],
     metrics: [
-      { value: '-38%', label: 'Charging session drop-off' },
-      { value: '4.7★', label: 'App store rating' },
-      { value: '2.1s', label: 'Time to nearest charger' },
+      { value: '+38%', label: 'App Subcription' },
+      { value: '7/10★', label: 'App Usability' },
+      { value: '+24%', label: 'Savings?' },
     ],
     overview:
-      'GreenCharge reimagines the electric charging journey as one continuous flow from planning to plugging in. The in-vehicle HMI and mobile companion share a single design language so drivers never lose context.',
+      'GreenCharge not only reimagines the electric charging journey as one continuous flow from planning to plugging in, but provide EV users with optimized home charging schedules based on dynamic electricity tariffs and CO₂ emission forecasts within a 24-hour time horizon.',
     challenge:
-      'Range anxiety and fragmented charging networks made EV road trips stressful. Drivers juggled multiple apps, inconsistent pricing and unreliable availability data.',
+      'Vehicle-side charging interface extension is not yet available in production; an SDK mock will be used initially. End-to-end architecture (vehicle/SDK mock, app, backend) must be defined and implemented. Data sources for prices and CO₂ must be integrated, fail-safe, and token-based. The supplier may determine the data source. UI/UX must provide clear 24-hour visualizations, slot selection, and status information. Quality assurance, performance, and compliance must be ensured.',
     research: {
       heading: 'Research',
       body: 'We interviewed 24 EV owners and shadowed 6 real charging sessions across urban and highway contexts.',
