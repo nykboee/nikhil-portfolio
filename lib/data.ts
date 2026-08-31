@@ -314,8 +314,8 @@ export const projects: Project[] = [
     ],
 
     journey:
-      'The GreenCharge journey moves the user from manually interpreting charging conditions to reviewing a system-generated recommendation. The user opens the application, waits for forecast data to load, reviews the 24-hour cost or CO₂ visualization, optionally defines a departure time, checks the recommended charging windows, adjusts charging parameters when required, and confirms the preferred charging schedule. The system performs the complex optimization while the user remains in control of the final decision.',
-
+  'From “How much will charging cost?” to “When should I charge?”, GreenCharge transforms a complex energy decision into a simple, guided in-vehicle experience.',
+    
     ia:
       'The information architecture is organized around four primary sections: Cost, Emission, Setup and Legal. Cost and Emission provide the primary optimization experiences, Setup contains charging and vehicle parameters that influence the recommendation, and Legal provides required information such as imprint, terms and licenses. A consistent navigation structure allows users to move between the sections without changing their mental model.',
 
