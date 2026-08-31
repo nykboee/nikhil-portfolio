@@ -237,71 +237,156 @@ export const projects: Project[] = [
     title: 'GreenCharge',
     category: 'EV Charging',
     year: '2026',
+
     summary:
-      'The GreenCharge application shall provide EV users with optimized home charging schedules based on dynamic electricity tariffs and CO₂ emission forecasts within a 24-hour time horizon.',
+      'GreenCharge is a stand-alone Android Automotive application that helps EV users optimize home charging based on dynamic electricity tariffs and CO₂ emission forecasts. The application identifies up to four optimal charging windows within the next 24 hours while considering charging requirements and an optional departure time.',
+
     cover: '/projects/GreenCharge-cover.png',
     hero: '/projects/GreenCharge-hero.png',
-    tags: ['Android Automotive', 'EV Charging', 'Companion App', 'Design System'],
-    metrics: [
-      { value: '+38%', label: 'App Subcription' },
-      { value: '7/10★', label: 'App Usability' },
-      { value: '+24%', label: 'Savings?' },
+
+    tags: [
+      'Android Automotive',
+      'EV Charging',
+      'Dynamic Tariffs',
+      'Automotive HMI',
+      'Design System',
     ],
+
+    metrics: [
+      { value: '24h', label: 'Optimization horizon' },
+      { value: '4', label: 'Optimal charging windows' },
+      { value: '15s', label: 'Data timeout threshold' },
+    ],
+
     overview:
-      'GreenCharge not only reimagines the electric charging journey as one continuous flow from planning to plugging in, but provide EV users with optimized home charging schedules based on dynamic electricity tariffs and CO₂ emission forecasts within a 24-hour time horizon.',
+      'GreenCharge transforms complex electricity price and CO₂ forecast data into a simple, actionable in-vehicle charging experience. The stand-alone Android Automotive app enables EV users to understand upcoming charging conditions, compare cost and emission optimization, configure charging parameters, define an optional departure time, and send a preferred charging schedule to the vehicle interface. The proof of concept focuses on dynamic home charging tariffs for the German market, with German and English localization.',
+
     challenge:
-      'Vehicle-side charging interface extension is not yet available in production; an SDK mock will be used initially. End-to-end architecture (vehicle/SDK mock, app, backend) must be defined and implemented. Data sources for prices and CO₂ must be integrated, fail-safe, and token-based. The supplier may determine the data source. UI/UX must provide clear 24-hour visualizations, slot selection, and status information. Quality assurance, performance, and compliance must be ensured.',
+      'Dynamic electricity tariffs and CO₂ intensity change throughout the day, making it difficult for EV users to determine when charging would be most economical or environmentally favourable. The UX challenge was to convert this complex forecast information into a glanceable 24-hour automotive visualization while considering vehicle state, charging power, battery capacity, required charging duration and an optional departure time. The solution also needed to demonstrate a complete UX/UI delivery capability — from requirements, user journeys and use cases through wireframes, design system, interaction states, specifications and developer handover. The vehicle-side charging interface is represented through an SDK or vehicle-interface mock for the proof of concept.',
+
     research: {
       heading: 'Research',
-      body: 'We interviewed 24 EV owners and shadowed 6 real charging sessions across urban and highway contexts.',
+      body:
+        'The UX analysis focused on understanding the charging decision, the information users need before scheduling charging, and the constraints that influence optimization. Requirements, charging scenarios and automotive interaction considerations were translated into user goals, tasks and use cases.',
       list: [
-        'Availability uncertainty was the #1 anxiety driver.',
-        'Drivers wanted charging planned into the route, not bolted on.',
-        'Payment and authentication friction caused mid-session abandonment.',
+        'Users should not need to manually interpret complex price and CO₂ forecasts.',
+        'Charging recommendations must consider the required charging duration and configured vehicle parameters.',
+        'Departure time can restrict the available optimization window and must be clearly communicated.',
+        'Cost and CO₂ optimization require different decision criteria while maintaining a consistent interaction model.',
+        'Loading, missing-data and transmission states are essential because the experience depends on backend and vehicle data.',
+        'The interaction model must minimize cognitive load and unnecessary interaction in an in-vehicle environment.',
       ],
     },
+
     benchmarking: {
       heading: 'Competitive Benchmarking',
-      body: 'We benchmarked six leading charging and navigation products against discoverability, trust and speed-to-charge.',
-      list: ['Native OEM navigation', 'Third-party charging networks', 'Consumer map apps'],
+      body:
+        'Benchmarking focused on relevant interaction patterns from smart charging, energy optimization, EV and automotive infotainment experiences. The objective was not to replicate a specific product, but to identify effective patterns for presenting time-based forecast data, recommendations, configuration and system feedback.',
+      list: [
+        'Dynamic energy tariff visualization',
+        'Smart EV charging and scheduling experiences',
+        'Automotive infotainment data visualization',
+        'Time-based recommendation interfaces',
+        'Charging configuration and scheduling patterns',
+        'System status, error recovery and confirmation patterns',
+      ],
     },
+
     personas: [
-      { name: 'Aditi', role: 'Daily commuter', need: 'Predictable, fast top-ups near work and home.' },
-      { name: 'Marcus', role: 'Long-distance traveler', need: 'Confidence that chargers en route will be free and working.' },
+      {
+        name: 'Anna',
+        role: 'Cost-conscious home charger',
+        need:
+          'Wants to reduce charging costs without manually monitoring dynamic electricity prices throughout the day.',
+      },
+      {
+        name: 'Leon',
+        role: 'Eco-conscious EV driver',
+        need:
+          'Wants to charge when forecast CO₂ intensity is lower without having to interpret complex energy data.',
+      },
+      {
+        name: 'Miriam',
+        role: 'Control-oriented EV owner',
+        need:
+          'Wants to configure charging power, battery capacity, minimum SOC and departure time so recommendations reflect her vehicle and charging situation.',
+      },
     ],
+
     journey:
-      'From "will I make it?" during planning, through "is this charger free?" en route, to "am I done yet?" at the stall — we designed reassurance into every moment.',
-    ia: 'A three-pillar structure — Plan, Navigate, Charge — keeps the mental model consistent across vehicle and phone.',
+      'The GreenCharge journey moves the user from manually interpreting charging conditions to reviewing a system-generated recommendation. The user opens the application, waits for forecast data to load, reviews the 24-hour cost or CO₂ visualization, optionally defines a departure time, checks the recommended charging windows, adjusts charging parameters when required, and confirms the preferred charging schedule. The system performs the complex optimization while the user remains in control of the final decision.',
+
+    ia:
+      'The information architecture is organized around four primary sections: Cost, Emission, Setup and Legal. Cost and Emission provide the primary optimization experiences, Setup contains charging and vehicle parameters that influence the recommendation, and Legal provides required information such as imprint, terms and licenses. A consistent navigation structure allows users to move between the sections without changing their mental model.',
+
     taskflow:
-      'The critical path from destination entry to confirmed charging stop was reduced from 9 steps to 4, with smart defaults for preferred networks.',
+      'Three primary task flows were defined: cost-optimized charging, charging configuration and CO₂-optimized charging. The main interaction follows a consistent pattern — retrieve data, understand the forecast, review the recommendation, optionally modify constraints, and confirm the preferred charging schedule. Departure time and charging parameters are treated as optimization constraints rather than separate complex workflows.',
+
     wireframes: [
-      { image: '/projects/GreenCharge-wire-1.png', caption: 'Route planner with charging stops' },
-      { image: '/projects/GreenCharge-wire-2.png', caption: 'Live charger availability list' },
+      {
+        image: '/projects/GreenCharge-wire-1.png',
+        caption:
+          '24-hour Cost Optimization dashboard with recommended charging windows, SOC information and savings',
+      },
+      {
+        image: '/projects/GreenCharge-wire-2.png',
+        caption:
+          'Setup and charging configuration flow with departure time and vehicle charging parameters',
+      },
     ],
+
     ui: [
-      { image: '/projects/GreenCharge-ui-1.png', caption: 'In-vehicle charging map' },
-      { image: '/projects/GreenCharge-ui-2.png', caption: 'Companion app session tracking' },
+      {
+        image: '/projects/GreenCharge-ui-1.png',
+        caption:
+          'High-fidelity Android Automotive Cost Optimization interface',
+      },
+      {
+        image: '/projects/GreenCharge-ui-2.png',
+        caption:
+          'High-fidelity CO₂ Optimization interface with recommended charging windows',
+      },
     ],
+
     designSystem: {
       heading: 'Design System',
-      body: 'A token-based system with energy-state color semantics, shared across AAOS and mobile, integrated with the release library.',
-      list: ['Energy state color tokens', 'Adaptive map components', 'Cross-platform typography scale'],
+      body:
+        'A lightweight project-specific Figma design system was created to ensure visual and interaction consistency across the GreenCharge experience. The system is structured around reusable foundations, components, states and variables that can be handed over to development and extended as the application evolves.',
+      list: [
+        'Color tokens for cost, emission, recommendation, restricted and system states',
+        'Typography hierarchy optimized for a 1920 × 1080 automotive display',
+        '8-point spacing system and defined layout grid',
+        'Reusable navigation, button, input, chart, dialog and feedback components',
+        'Cost and emission chart components with reusable states',
+        'Loading, error, disabled, selected, processing and success variants',
+        'German and English localization considerations including text expansion',
+        'Figma component naming and specification conventions for developer handover',
+      ],
     },
+
     accessibility: {
       heading: 'Accessibility',
-      body: 'High-contrast charging states, large touch targets for gloved hands and voice-first flows for eyes-on-road interaction.',
+      body:
+        'Accessibility and automotive usability were considered throughout the interaction and visual design. The interface prioritizes glanceability, readable typography, high contrast, clear component states and sufficiently large interaction targets. Critical information such as recommended charging windows is not communicated through colour alone. The experience also considers German text expansion, consistent interaction placement and reduced cognitive demand during in-vehicle use.',
     },
+
     handover: {
       heading: 'Developer Handover',
-      body: 'Specs delivered with component states, motion timing and edge cases; paired with engineering during AAOS integration.',
+      body:
+        'The GreenCharge handover package connects UX requirements directly to implementation. The Figma delivery includes user journeys, use cases, task flows, information architecture, low- and high-fidelity designs, reusable components, design tokens, screen specifications, interaction behaviour, content, system states and edge cases. Developer documentation defines the expected behaviour for data retrieval, chart rendering, optimization, departure-time restrictions, setup validation, schedule transmission and success or failure feedback.',
     },
+
     results: [
-      '38% reduction in charging session drop-off.',
-      '4.7★ average rating for the companion app.',
-      'Adopted as reference pattern across two additional brands.',
+      'Established a complete UX/UI concept for cost- and CO₂-optimized home charging.',
+      'Defined a 24-hour visualization model capable of presenting up to four optimal charging windows.',
+      'Created an end-to-end interaction model covering optimization, configuration and charging schedule transmission.',
+      'Delivered a reusable Figma design system with components, tokens, states and developer-ready specifications.',
+      'Created a traceable UX delivery framework connecting user goals, use cases, screens, interactions, states and functional requirements.',
+      'Established a foundation for subsequent Android Automotive implementation, vehicle-interface integration and in-vehicle validation.',
     ],
+
     reflection:
-      'Designing for a moving, energy-constrained context taught us that reassurance beats information density — say less, but say it exactly when it matters.',
+      'The biggest UX challenge was not visualizing electricity prices or CO₂ data, but deciding how much complexity the user should ever have to see. GreenCharge demonstrates that the system can perform the complex optimization in the background while the interface focuses on making the recommendation understandable, controllable and trustworthy. The experience is designed to say less, show what matters, and give the driver a clear path from forecast to charging decision.',
   },
   {
     slug: 'personalization-platform',
