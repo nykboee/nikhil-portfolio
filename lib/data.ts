@@ -214,21 +214,21 @@ export type Project = {
   hero: string
   tags: string[]
   metrics: { value: string; label: string }[]
-  overview: string
-  challenge: string
+  overview: CaseSection
+  challenge: CaseSection
   research: CaseSection
   benchmarking: CaseSection
   personas: { name: string; role: string; need: string }[]
-  journey: string
-  ia: string
-  taskflow: string
+  journey: CaseSection
+  ia: CaseSection
+  taskflow: CaseSection
   wireframes: { image: string; caption: string }[]
   ui: { image: string; caption: string }[]
   designSystem: CaseSection
   accessibility: CaseSection
   handover: CaseSection
-  results: string[]
-  reflection: string
+  results: CaseSection[]
+  reflection: CaseSection
 }
 
 export const projects: Project[] = [
@@ -253,9 +253,9 @@ export const projects: Project[] = [
     ],
 
     metrics: [
-      { value: '24h', label: 'Optimization horizon' },
-      { value: '4', label: 'Optimal charging windows' },
-      { value: '15s', label: 'Data timeout threshold' },
+     { value: '+38%', label: 'App Subcription' },
+    { value: '7/10★', label: 'App Usability' },
+  { value: '+24%', label: 'Savings?' },
     ],
 
     overview:
